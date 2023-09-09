@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{36003DF9-B5DF-79F6-078F-EC9BB4AF1AA6}|">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMovement.cs">
+    <Files>
+      <File FileName="Assets/Scripts/movecamera.cs" />
+      <File FileName="Assets/Scripts/shootbow.cs" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="95" Column="9" />
+      <File FileName="Assets/Scripts/MouseLook.cs" />
+      <File FileName="Assets/Scripts/arrowlife.cs" />
+      <File FileName="Assets/PlayerPM.physicMaterial" />
+      <File FileName="Assets/Scripts/sunspin.cs" />
+      <File FileName="Assets/Scripts/camposition.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Bow-Game">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f28cb6bb-415d-4e81-aa8a-b52cc07dcffb" />
+  <MultiItemStartupConfigurations />
+</Properties>
