@@ -10,8 +10,10 @@ public class shootbow : MonoBehaviour
     public GameObject arrow;
     public Transform campos;
     public Transform arrowpos;
+    public Transform player;
     private GameObject dupearrow;
     private float holdbow = 0f;
+    private Vector3 vel;
     void Update()
     {
         if (dupearrow == null&&Input.GetKey(drawarrow))
@@ -25,17 +27,40 @@ public class shootbow : MonoBehaviour
             {
                 holdbow += .15f;
             }
-            else if (!Input.GetKey(click))
+            else if (!Input.GetKey(click)&&!Input.GetKey(KeyCode.G))
             {
-                if (holdbow > 5)
+                if (holdbow > .5f)
                 {
-                    dupearrow.GetComponent<Rigidbody>().velocity = campos.forward * holdbow;
-                    dupearrow.GetComponent<Rigidbody>().useGravity = true;
-                    dupearrow = null;
-                    holdbow = 0;
+                    if (!Physics.Linecast(player.position, arrowpos.position)) {
+                        vel = Physics.RaycastAll(campos.position, campos.forward, 60)[0].point - transform.position;
+                        print(vel);
+                        dupearrow.GetComponent<Rigidbody>().velocity = reduceVector(vel) *holdbow;
+                        print(reduceVector(vel));
+                        dupearrow.GetComponent<Rigidbody>().useGravity = true;
+                        dupearrow = null;
+                        holdbow = 0;
+                    }
+                    else
+                    {
+                        holdbow = 0;
+                    }
                 }
             }
         }
+    }
+    private Vector3 reduceVector(Vector3 vector)
+    {
+        float highestvalue = Mathf.Abs(vector.x);
+        if (Mathf.Abs(vector.y) > highestvalue)
+        {
+            highestvalue = Mathf.Abs(vector.y);
+        }
+        if (Mathf.Abs(vector.z) > highestvalue)
+        {
+            highestvalue = Mathf.Abs(vector.z);
+        }
+        Vector3 newvector = new Vector3(vector.x/ highestvalue, vector.y / highestvalue, vector.z / highestvalue);
+        return newvector;
     }
     
 }

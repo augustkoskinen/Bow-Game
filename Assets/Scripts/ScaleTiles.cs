@@ -5,8 +5,8 @@ using UnityEngine.UIElements;
 
 public class ScaleTiles : MonoBehaviour
 {
-    private float tileX = 10;
-    private float tileY = 10;
+    private readonly float tileX = 2;
+    private readonly float tileY = 2;
     private Material mat;
     void Start()
     {
