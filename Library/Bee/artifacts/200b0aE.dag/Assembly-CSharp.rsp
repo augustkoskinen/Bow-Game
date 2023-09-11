@@ -352,6 +352,7 @@
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.8f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/arrowlife.cs"
 "Assets/Scripts/camposition.cs"
+"Assets/Scripts/headcollision.cs"
 "Assets/Scripts/MouseLook.cs"
 "Assets/Scripts/movecamera.cs"
 "Assets/Scripts/PlayerMovement.cs"

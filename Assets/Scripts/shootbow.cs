@@ -12,6 +12,7 @@ public class shootbow : MonoBehaviour
     public Transform arrowpos;
     public Transform player;
     private GameObject dupearrow;
+    private LayerMask RaycastLayers;
     private float holdbow = 0f;
     private Vector3 vel;
     void Update()
@@ -19,6 +20,12 @@ public class shootbow : MonoBehaviour
         if (dupearrow == null&&Input.GetKey(drawarrow))
         {
             dupearrow = Instantiate(arrow, arrowpos.position, transform.rotation);
+            var ran = Random.Range(0,2);
+            dupearrow.GetComponent<arrowlife>().type = "basic";
+            if (ran == 0)
+            {
+                dupearrow.GetComponent<arrowlife>().type = "pan";
+            }
             dupearrow.GetComponent<Rigidbody>().useGravity = false;
         }
         if (dupearrow != null)
@@ -31,11 +38,9 @@ public class shootbow : MonoBehaviour
             {
                 if (holdbow > .5f)
                 {
-                    if (!Physics.Linecast(player.position, arrowpos.position)) {
+                    if (!Physics.Linecast(player.position, arrowpos.position, LayerMask.GetMask("Default", "TransparentFX", "Ignore Raycast", "Water", "UI", "Rig", "ground"))) {
                         vel = Physics.RaycastAll(campos.position, campos.forward, 60)[0].point - transform.position;
-                        print(vel);
                         dupearrow.GetComponent<Rigidbody>().velocity = reduceVector(vel) *holdbow;
-                        print(reduceVector(vel));
                         dupearrow.GetComponent<Rigidbody>().useGravity = true;
                         dupearrow = null;
                         holdbow = 0;

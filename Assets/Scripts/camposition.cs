@@ -16,10 +16,10 @@ public class camposition : MonoBehaviour
         if (Input.GetKey(KeyCode.G))
         {
             position = camdir.transform.forward*-5;
-            camdir.GetComponent<Camera>().cullingMask = LayerMask.GetMask("Default", "TransparentFX", "Ignore Raycast", "Water", "UI", "Rig", "ground", "Player2","Player1","Eyes");
+            camdir.GetComponent<Camera>().cullingMask = LayerMask.GetMask("Default", "TransparentFX", "Ignore Raycast", "Water", "UI", "Rig", "ground", "Player2","Player1","Eyes","head");
         } else {
             position = new(0f, 1f, 0f);
-            camdir.GetComponent<Camera>().cullingMask = LayerMask.GetMask("Default", "TransparentFX", "Ignore Raycast", "Water", "UI", "Rig","ground","Player2"); ;
+            camdir.GetComponent<Camera>().cullingMask = LayerMask.GetMask("Default", "TransparentFX", "Ignore Raycast", "Water", "UI", "Rig","ground","Player2", "head"); ;
         }
         if (!Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.LeftControl))
         {

@@ -64,6 +64,7 @@
     <Compile Include="Assets/Scripts/MouseLook.cs" />
     <Compile Include="Assets/Scripts/shootbow.cs" />
     <Compile Include="Assets/Scripts/sunspin.cs" />
+    <Compile Include="Assets/Scripts/headcollision.cs" />
     <Compile Include="Assets/Scripts/camposition.cs" />
     <Compile Include="Assets/Scripts/PlayerMovement.cs" />
   </ItemGroup>
