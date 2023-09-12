@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/ScaleTiles.cs" />
+    <Compile Include="Assets/explosionkill.cs" />
     <Compile Include="Assets/Scripts/arrowlife.cs" />
     <Compile Include="Assets/Scripts/movecamera.cs" />
     <Compile Include="Assets/Scripts/MouseLook.cs" />

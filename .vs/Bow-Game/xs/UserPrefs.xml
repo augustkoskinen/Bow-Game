@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{36003DF9-B5DF-79F6-078F-EC9BB4AF1AA6}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/arrowlife.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/explosionkill.cs">
     <Files>
       <File FileName="Assets/Scripts/shootbow.cs" />
-      <File FileName="Assets/Scripts/arrowlife.cs" Line="104" Column="1" />
       <File FileName="Assets/Scripts/headcollision.cs" />
       <File FileName="Assets/Scripts/MouseLook.cs" />
       <File FileName="Assets/Scripts/movecamera.cs" />
-      <File FileName="Assets/Scripts/camposition.cs" />
+      <File FileName="Assets/Scripts/camposition.cs" Line="1" Column="1" />
+      <File FileName="Assets/explosionkill.cs" Line="16" Column="36" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

@@ -15,6 +15,7 @@ public class arrowlife : MonoBehaviour
     public Mesh panmesh;
     public Material panmat;
     public ParticleSystem Explosion;
+    private ParticleSystem newexplostion;
     private Vector3 pancolsize = new(0.5f,0.2f,0.4f);
     private Vector3 pancolplace = new(0f, -0.04f, 0.5f);
     private Vector3 pansize = new(1,1,1);
@@ -99,7 +100,7 @@ public class arrowlife : MonoBehaviour
                 {
                     if (type == "bomb")
                     {
-                        ParticleSystem newexplostion = Instantiate(Explosion,headtrans.position,Quaternion.Euler(0,0,0));
+                        newexplostion = Instantiate(Explosion,headtrans.position,Quaternion.Euler(0,0,0));
                         Destroy(gameObject);
 
                     }
