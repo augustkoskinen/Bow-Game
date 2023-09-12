@@ -26,6 +26,7 @@ public class shootbow : MonoBehaviour
             {
                 dupearrow.GetComponent<arrowlife>().type = "pan";
             }
+            dupearrow.GetComponent<arrowlife>().type = "bomb";
             dupearrow.GetComponent<Rigidbody>().useGravity = false;
         }
         if (dupearrow != null)
