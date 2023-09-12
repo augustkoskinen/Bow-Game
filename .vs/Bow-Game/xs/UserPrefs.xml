@@ -1,10 +1,8 @@
 ﻿<Properties StartupConfiguration="{36003DF9-B5DF-79F6-078F-EC9BB4AF1AA6}|">
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ca96d8e6-3ee4-499c-ad9c-71854aa4f869" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/arrowlife.cs">
     <Files>
-      <File FileName="Assets/Scripts/shootbow.cs" Line="29" Column="61" />
-      <File FileName="Assets/Scripts/arrowlife.cs" Line="24" Column="51" />
+      <File FileName="Assets/Scripts/shootbow.cs" />
+      <File FileName="Assets/Scripts/arrowlife.cs" Line="104" Column="1" />
       <File FileName="Assets/Scripts/headcollision.cs" />
       <File FileName="Assets/Scripts/MouseLook.cs" />
       <File FileName="Assets/Scripts/movecamera.cs" />
@@ -20,11 +18,18 @@
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Unity" selected="True" />
+        </State>
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="523bc45b-32be-47f4-855b-c540e7d9d447" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
 </Properties>

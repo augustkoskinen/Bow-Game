@@ -101,6 +101,7 @@ public class arrowlife : MonoBehaviour
                     {
                         ParticleSystem newexplostion = Instantiate(Explosion,headtrans.position,Quaternion.Euler(0,0,0));
                         Destroy(gameObject);
+
                     }
                     rb.velocity = new(0, 0, 0);
                     rb.useGravity = false;
