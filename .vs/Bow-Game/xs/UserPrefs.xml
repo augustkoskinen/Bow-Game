@@ -1,25 +1,23 @@
 ﻿<Properties StartupConfiguration="{36003DF9-B5DF-79F6-078F-EC9BB4AF1AA6}|">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="cf129750-969c-4836-b60c-a4e4b480aa4d" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/explosionkill.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMovement.cs">
     <Files>
       <File FileName="Assets/Scripts/shootbow.cs" />
       <File FileName="Assets/Scripts/headcollision.cs" />
-      <File FileName="Assets/Scripts/MouseLook.cs" />
-      <File FileName="Assets/Scripts/movecamera.cs" />
-      <File FileName="Assets/Scripts/camposition.cs" />
-      <File FileName="Assets/explosionkill.cs" Line="20" Column="17" />
+      <File FileName="Assets/Scripts/MouseLook.cs" Line="40" Column="51" />
+      <File FileName="Assets/Scripts/movecamera.cs" Line="17" Column="56" />
+      <File FileName="Assets/Scripts/camposition.cs" Line="22" Column="1" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="45" Column="15" />
+      <File FileName="Assets/Scripts/arrowlife.cs" Line="38" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Bow-Game">
             <Node name="Assets" expanded="True">
+              <Node name="FishNet" expanded="True">
+                <Node name="Upgrading" expanded="True" />
+              </Node>
               <Node name="Scripts" expanded="True" />
             </Node>
           </Node>
@@ -27,4 +25,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8603b835-21bf-43a1-9ba3-8259bebe16cd" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

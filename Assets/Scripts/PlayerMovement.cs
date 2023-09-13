@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FishNet.Object;
+using FishNet.Connection;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : NetworkBehaviour
 {
     public LayerMask groundMask;
     public Transform orientation;
     public Transform camposition;
-    public Transform bow;
+    public GameObject bow;
     public Transform body;
     public Vector3 movedirection;
     Rigidbody rb;
@@ -31,6 +33,18 @@ public class PlayerMovement : MonoBehaviour
     public KeyCode jumpkey = KeyCode.Space;
     public KeyCode shiftkey = KeyCode.LeftShift;
     public KeyCode controlkey = KeyCode.LeftControl;
+
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+        if (!base.IsOwner)
+        {
+            gameObject.GetComponent<PlayerMovement>().enabled = false;
+        } else
+        {
+            //bow = GameObject.Find("bow");
+        }
+    }
 
     private void Start()
     {
@@ -77,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
         body.localScale = new Vector3(1f, 1f, 1f);
         body.localPosition = new Vector3(0, 0f, 0f);
         orientation.localPosition = new Vector3(0f, 0f, 0f);
-        bow.SetLocalPositionAndRotation(new(0.8f, -0.703f, 1), Quaternion.Euler(0, 0, 0));
+        bow.transform.SetLocalPositionAndRotation(new(0.8f, -0.703f, 1), Quaternion.Euler(0, 0, 0));
         if (Input.GetKey(shiftkey))
         {
             speed = runspeed;
@@ -89,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
             body.localScale = new Vector3(1f, .5f, 1f);
             body.localPosition = new Vector3(0, -.5f, 0f);
             orientation.localPosition = new Vector3(0f, -1f, 0f);
-            bow.SetLocalPositionAndRotation(new(0.8f, -.5f, 1), Quaternion.Euler(0, 0, 67));
+            bow.transform.SetLocalPositionAndRotation(new(0.8f, -.5f, 1), Quaternion.Euler(0, 0, 67));
         }
 
         if (Input.GetKey(KeyCode.Mouse0))
