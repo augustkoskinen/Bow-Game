@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Mirror;
 
 public class shootbow : MonoBehaviour
 {
@@ -15,40 +16,44 @@ public class shootbow : MonoBehaviour
     private LayerMask RaycastLayers;
     private float holdbow = 0f;
     private Vector3 vel;
-    void Update()
+    void FixedUpdate()
     {
-        if (dupearrow == null&&Input.GetKey(drawarrow))
+        if (true)
         {
-            dupearrow = Instantiate(arrow, arrowpos.position, transform.rotation);
-            var ran = Random.Range(0,2);
-            dupearrow.GetComponent<arrowlife>().type = "basic";
-            if (ran == 0)
+            if (dupearrow == null && Input.GetKey(drawarrow))
             {
-                dupearrow.GetComponent<arrowlife>().type = "pan";
-            }
-            dupearrow.GetComponent<arrowlife>().type = "bomb";
-            dupearrow.GetComponent<Rigidbody>().useGravity = false;
-        }
-        if (dupearrow != null)
-        {
-            if (Input.GetKey(click) && holdbow < 60)
-            {
-                holdbow += .15f;
-            }
-            else if (!Input.GetKey(click)&&!Input.GetKey(KeyCode.G))
-            {
-                if (holdbow > .5f)
+                dupearrow = Instantiate(arrow, arrowpos.position, transform.rotation);
+                var ran = Random.Range(0, 2);
+                dupearrow.GetComponent<arrowlife>().type = "basic";
+                if (ran == 0)
                 {
-                    if (!Physics.Linecast(player.position, arrowpos.position, LayerMask.GetMask("Default", "TransparentFX", "Ignore Raycast", "Water", "UI", "Rig", "ground"))) {
-                        vel = Physics.RaycastAll(campos.position, campos.forward, 60)[0].point - transform.position;
-                        dupearrow.GetComponent<Rigidbody>().velocity = reduceVector(vel) *holdbow;
-                        dupearrow.GetComponent<Rigidbody>().useGravity = true;
-                        dupearrow = null;
-                        holdbow = 0;
-                    }
-                    else
+                    dupearrow.GetComponent<arrowlife>().type = "pan";
+                }
+                dupearrow.GetComponent<arrowlife>().type = "bomb";
+                dupearrow.GetComponent<Rigidbody>().useGravity = false;
+            }
+            if (dupearrow != null)
+            {
+                if (Input.GetKey(click) && holdbow < 60)
+                {
+                    holdbow += 30f*Time.deltaTime;
+                }
+                else if (!Input.GetKey(click) && !Input.GetKey(KeyCode.G))
+                {
+                    if (holdbow > .5f)
                     {
-                        holdbow = 0;
+                        if (!Physics.Linecast(player.position, arrowpos.position, LayerMask.GetMask("Default", "TransparentFX", "Ignore Raycast", "Water", "UI", "Rig", "ground")))
+                        {
+                            vel = Physics.RaycastAll(campos.position, campos.forward, 60)[0].point - transform.position;
+                            dupearrow.GetComponent<Rigidbody>().velocity = reduceVector(vel) * holdbow;
+                            dupearrow.GetComponent<Rigidbody>().useGravity = true;
+                            dupearrow = null;
+                            holdbow = 0;
+                        }
+                        else
+                        {
+                            holdbow = 0;
+                        }
                     }
                 }
             }

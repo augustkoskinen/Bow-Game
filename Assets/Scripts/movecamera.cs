@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class movecamera : MonoBehaviour
 {
-    public Transform cameraposition;
+    public GameObject cameraposition;
     //public Transform playerposition;
 
+    private void Start()
+    {
+        cameraposition = GameObject.Find("PlayerCam");
+    }
     // Update is called once per frame
     void Update()
     {
-        transform.position = cameraposition.position;
+        transform.position = cameraposition.transform.position;
     }
 }
